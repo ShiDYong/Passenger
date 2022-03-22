@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>把字符串转化为date对象</h2>
+    <p id="demo"></p>
+    <script>
+        var text = '{"name":"Bill Gates","birth":"1955-10-28","city":"guanghzou"}';
+        var obj = JSON.parse(text);
+        obj.birth = new Date(obj.birth);
+        document.getElementById("demo").innerHTML = obj.name + "," + obj.birth;
+     </script>
+</body >
+
+</html >

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>input formmethod 属性</h1>
+    <!--  关于 GET 的注意事项：
+            以名称/值对的形式将表单数据追加到 URL
+            永远不要使用 GET 发送敏感数据！（提交的表单数据在 URL 中可见！）
+            URL 的长度受到限制（2048 个字符）
+            对于用户希望将结果添加为书签的表单提交很有用
+            GET 适用于非安全数据，例如 Google 中的查询字符串
+关于 POST 的注意事项：
+            将表单数据附加在 HTTP 请求的正文中（不在 URL 中显示提交的表单数据）
+            POST 没有大小限制，可用于发送大量数据。
+            带有 POST 的表单提交无法添加书签
+     -->
+
+    <p>The formmethod attribute defines the HTTP method for sending form-data to the action URL.</p>
+
+    <form action="/demo/html/action_page.php" method="get" target="_blank">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="使用 GET 提交">
+        <input type="submit" formmethod="post" value="使用 POST 提交">
+    </form>
+
+</body>
+
+</html>

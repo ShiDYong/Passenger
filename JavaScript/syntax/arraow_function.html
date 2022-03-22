@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript函数</h2>
+    <p>箭头函数的使用方法。</p>
+    <p id="demo"></p>
+    <script>
+        var hello;
+        //    hello = ()=>{
+        //        return "Hello World!";
+        //    }
+
+        // 确实变短了！如果函数只有一个语句，并且该语句返回一个值，
+        // 则可以去掉括号和 return 关键字：
+        // 箭头函数默认返回值：
+
+        /*
+        hello = () => "Hello World!";
+       
+        */
+
+        //带有参数的箭头函数，将它们传递到括号内：
+        //hello = (val) => "Hello" + val;
+
+
+        //进一步简化：如果只有一个参数，可以略过括号：
+        hello = val => "Hello" + val;
+        document.getElementById("demo").innerHTML = hello("Universe!");
+
+
+    </script>
+
+</body>
+
+</html>

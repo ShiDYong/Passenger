@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript addEventListener()</h1>
+
+    <p>此例演示如何在使用 addEventListener() 方法时传递参数值。</p>
+
+    <p>单击按钮以执行计算。</p>
+
+    <button id="myBtn">试一试</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var p1 = 5;
+        var p2 = 7;
+
+        document.getElementById("myBtn").addEventListener("click", function () {
+            myFunction(p1, p2);
+        });
+
+        function myFunction(a, b) {
+            var result = a * b;
+            document.getElementById("demo").innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>

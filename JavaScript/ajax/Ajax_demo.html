@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        function fun() {
+            //1、$.ajax()方式实现异步请求，参数比较多，如下几个是常用的
+            $.ajax({
+                url: "ajaxServlet",//请求路径
+                type: "POST",  //请求方式
+                // data:"username=Tim&age=20", //请求参数 ，方式一
+                data: { "username": "Tim", "age": 20 },//请求参数 ，方式二,JSON格式，推荐使用
+                success: function (data) { //响应成功后的回调函数,data为接收的响应值
+                    alert(data);
+                },
+                error: function () { //响应出错，会执行的回调函数
+                    alert("出错了~~");
+                },
+                dataType: "text"//设置接收到响应数据的格式
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="发送异步请求" onclick="fun();">
+    <input type="text">
+</body>
+
+</html>
